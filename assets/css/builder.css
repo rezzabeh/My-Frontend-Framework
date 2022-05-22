@@ -1,0 +1,1461 @@
+/*create layout container(rows(cols)) & displays*/
+
+.container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden
+}
+
+.row {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden
+}
+
+.flexed {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap
+}
+
+.flexrowrev {
+    flex-direction: row-reverse
+}
+
+.flexcolrev {
+    flex-direction: row-reverse
+}
+
+.blocked {
+    display: block
+}
+
+.noned {
+    display: none
+}
+
+.inlined {
+    display: inline-block
+}
+
+.right {
+    float: right
+}
+
+.left {
+    float: left
+}
+
+.colfix {
+    float: none;
+    clear: both
+}
+
+
+/*height h:height m:min & max a:all*/
+
+.fullheight {
+    min-height: 100vh;
+    height: 100vh
+}
+
+.h75 {
+    min-height: 75vh
+}
+
+.h66 {
+    min-height: 66vh
+}
+
+.halfheight {
+    min-height: 50vh;
+    height: 50vh
+}
+
+.h33 {
+    min-height: 33vh
+}
+
+.h25 {
+    min-height: 25vh
+}
+
+.hauto {
+    height: auto
+}
+
+.mhauto {
+    min-height: auto;
+    max-height: auto
+}
+
+.ahauto {
+    height: auto;
+    min-height: auto;
+    max-height: auto
+}
+
+.noheight {
+    height: 0
+}
+
+
+/*width col:column colg:grid column num/12*/
+
+.col2 {
+    width: 50%
+}
+
+.col3 {
+    width: 33.33%
+}
+
+.col4 {
+    width: 25%
+}
+
+.col5 {
+    width: 20%
+}
+
+.col66 {
+    width: 66.66%
+}
+
+.col75 {
+    width: 75%
+}
+
+.col80 {
+    width: 80%
+}
+
+.column1,
+.column100,
+.colg12 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%
+}
+
+.column2,
+.column50,
+.colg6 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%
+}
+
+.column3,
+.colg4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.33%;
+    flex: 0 0 33.33%;
+    max-width: 33.33%
+}
+
+.column4,
+.colg3 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%
+}
+
+.column5,
+.column20 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%
+}
+
+.column6,
+.colg2 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 16.66%;
+    flex: 0 0 16.66%;
+    max-width: 16.66%
+}
+
+.column8 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 12.5%;
+    flex: 0 0 12.5%;
+    max-width: 12.5%
+}
+
+.colg1 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 8.33%;
+    flex: 0 0 8.33%;
+    max-width: 8.33%
+}
+
+.column10 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 10%;
+    flex: 0 0 10%;
+    max-width: 10%
+}
+
+.column30 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 30%;
+    flex: 0 0 30%;
+    max-width: 30%
+}
+
+.column40 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 40%;
+    flex: 0 0 40%;
+    max-width: 40%
+}
+
+.colg5 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 41.66%;
+    flex: 0 0 41.66%;
+    max-width: 41.66%
+}
+
+.colg7 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 58.33%;
+    flex: 0 0 58.33%;
+    max-width: 58.33%
+}
+
+.column60 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 60%;
+    flex: 0 0 60%;
+    max-width: 60%
+}
+
+.colg8,
+.column66 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 66.66%;
+    flex: 0 0 66.66%;
+    max-width: 66.66%
+}
+
+.column70 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 70%;
+    flex: 0 0 70%;
+    max-width: 70%
+}
+
+.colg9,
+.column75 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 75%;
+    flex: 0 0 75%;
+    max-width: 75%
+}
+
+.column80 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 80%;
+    flex: 0 0 80%;
+    max-width: 80%
+}
+
+.colg10 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 83.33%;
+    flex: 0 0 83.33%;
+    max-width: 83.33%
+}
+
+.column90 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 90%;
+    flex: 0 0 90%;
+    max-width: 90%
+}
+
+.colg11 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 91.66%;
+    flex: 0 0 91.66%;
+    max-width: 91.66%
+}
+
+
+/*flex items*/
+
+.start {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: start
+}
+
+.center {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.end {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: end
+}
+
+.between {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+.top {
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline
+}
+
+.middle {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.bottom {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: end
+}
+
+
+/*p:padding m:margin r:right l:left t:top b:bottom s:small n:normal b:big pt:padding texts*/
+
+.pt {
+    padding: 9px
+}
+
+.ps {
+    padding: 18px
+}
+
+.pn {
+    padding: 36px
+}
+
+.pb {
+    padding: 72px
+}
+
+.pts {
+    padding-top: 20px
+}
+
+.ptn {
+    padding-top: 40px
+}
+
+.ptb {
+    padding-top: 80px
+}
+
+.pbs {
+    padding-bottom: 20px
+}
+
+.pbn {
+    padding-bottom: 40px
+}
+
+.pbb {
+    padding-bottom: 80px
+}
+
+.prs {
+    padding-right: 18px
+}
+
+.pls {
+    padding-left: 18px
+}
+
+.prn {
+    padding-right: 36px
+}
+
+.pln {
+    padding-left: 36px
+}
+
+.prb {
+    padding-right: 72px
+}
+
+.plb {
+    padding-left: 72px
+}
+
+.p0 {
+    padding: 0
+}
+
+.pr0 {
+    padding-right: 0
+}
+
+.pl0 {
+    padding-left: 0
+}
+
+.pt0 {
+    padding-top: 0
+}
+
+.pb0 {
+    padding-bottom: 0
+}
+
+.mts {
+    margin-top: 15px
+}
+
+.mtn {
+    margin-top: 30px
+}
+
+.mtb {
+    margin-top: 45px
+}
+
+.mbs {
+    margin-bottom: 15px
+}
+
+.mbn {
+    margin-bottom: 30px
+}
+
+.mbb {
+    margin-bottom: 45px
+}
+
+.m0 {
+    margin: 0
+}
+
+.ma {
+    margin: auto
+}
+
+.mt0 {
+    margin-top: 0
+}
+
+.mb0 {
+    margin-bottom: 0
+}
+
+
+/*po:positions*/
+
+.pos {
+    position: static
+}
+
+.por {
+    position: relative
+}
+
+.poa {
+    position: absolute
+}
+
+.pof {
+    position: fixed
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0
+}
+
+.r0 {
+    right: 0
+}
+
+.l0 {
+    left: 0
+}
+
+.t0 {
+    top: 0
+}
+
+.b0 {
+    bottom: 0
+}
+
+.pofull {
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0
+}
+
+.pofulltop {
+    right: 0;
+    left: 0;
+    top: 0
+}
+
+.pofullbottom {
+    right: 0;
+    left: 0;
+    bottom: 0
+}
+
+
+/*box shadow appbox pcbox oopsbox*/
+
+.appbox {
+    box-shadow: 0px 3px 13px -8px var(--shadowcolor)
+}
+
+.pcbox {
+    box-shadow: 0px 6px 12px -6px var(--shadowcolor)
+}
+
+.oopsbox {
+    box-shadow: 0px 17px 13px -15px var(--shadowcolor)
+}
+
+.widebox {
+    box-shadow: 0 13px 9px -10px var(--shadowcolor)
+}
+
+.dark .appbox {
+    box-shadow: 0px 3px 13px -8px var(--shadowcolordark)
+}
+
+.dark .pcbox {
+    box-shadow: 0px 6px 12px -6px var(--shadowcolordark)
+}
+
+.dark .oopsbox {
+    box-shadow: 0px 17px 13px -15px var(--shadowcolordark)
+}
+
+.dark .widebox {
+    box-shadow: 0 13px 9px -10px var(--shadowcolordark)
+}
+
+
+/*border b:border w:width s:style c:color r:radius*/
+
+.border {
+    border: solid 1px transparent
+}
+
+.bws {
+    border-width: thin
+}
+
+.bwn {
+    border-width: 2px
+}
+
+.bwb {
+    border-width: thick
+}
+
+.bsdot {
+    border-style: dotted
+}
+
+.bsdash {
+    border-style: dashed
+}
+
+.bc {
+    border-color: var(--bordercolor)
+}
+
+.dark .bc {
+    border-color: var(--bordercolordark)
+}
+
+.br4 {
+    border-radius: 4px
+}
+
+.br8 {
+    border-radius: 8px
+}
+
+.br16 {
+    border-radius: 16px
+}
+
+.br50 {
+    border-radius: 50px
+}
+
+.brc {
+    border-radius: 50%
+}
+
+
+/*button btn simple radius circle*/
+
+.btn {
+    background-color: var(--bgbtn);
+    color: var(--btncolor);
+    display: inline-block
+}
+
+.dark .btn {
+    background-color: var(--bgbtndark);
+    color: var(--btncolordark);
+    display: inline-block
+}
+
+.btn:hover {
+    background-color: var(--hoverbgbtn);
+    color: var(--hoverbtncolor)
+}
+
+.dark .btn:hover {
+    background-color: var(--hoverbgbtndark);
+    color: var(--hoverbtncolordark)
+}
+
+
+/*other*/
+
+.hidden {
+    visibility: hidden
+}
+
+.visible {
+    visibility: visible
+}
+
+.o0 {
+    opacity: 0
+}
+
+.o50 {
+    opacity: 0.5
+}
+
+.o1 {
+    opacity: 1
+}
+
+.over {
+    overflow: unset
+}
+
+.point {
+    cursor: pointer
+}
+
+@media screen and (max-width: 1024px) {
+    .col2,
+    .col3,
+    .col4,
+    .col5,
+    .col66,
+    .col75,
+    .col80 {
+        width: 100%
+    }
+    .colg1,
+    .colg2,
+    .colg3,
+    .colg4,
+    .colg5,
+    .colg6,
+    .colg7,
+    .colg8,
+    .colg9,
+    .colg10,
+    .colg11,
+    .colg12 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%
+    }
+    .column2,
+    .column3,
+    .column4,
+    .column5,
+    .column6,
+    .column8,
+    .column10,
+    .column20,
+    .column30,
+    .column40,
+    .column50,
+    .column60,
+    .column66,
+    .column70,
+    .column75,
+    .column80,
+    .column90 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%
+    }
+    .Tflexed {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-wrap: wrap
+    }
+    .Tflexrowrev {
+        flex-direction: row-reverse
+    }
+    .Tflexcolrev {
+        flex-direction: row-reverse
+    }
+    .Tblocked {
+        display: block
+    }
+    .Tnoned {
+        display: none
+    }
+    .Tinlined {
+        display: inline-block
+    }
+    .Tright {
+        float: right
+    }
+    .Tleft {
+        float: left
+    }
+    .Tcolfix {
+        float: none;
+        clear: both
+    }
+    .Tfullheight {
+        min-height: 100vh;
+        height: 100vh
+    }
+    .Th75 {
+        min-height: 75vh
+    }
+    .Th66 {
+        min-height: 66vh
+    }
+    .Thalfheight {
+        min-height: 50vh;
+        height: 50vh
+    }
+    .Th33 {
+        min-height: 33vh
+    }
+    .Th25 {
+        min-height: 25vh
+    }
+    .Thauto {
+        height: auto
+    }
+    .Tmhauto {
+        min-height: auto;
+        max-height: auto
+    }
+    .Tahauto {
+        height: auto;
+        min-height: auto;
+        max-height: auto
+    }
+    .Tnoheight {
+        height: 0
+    }
+    /*tablet width 20 25 33 50 66 75 80*/
+    .Tcol2 {
+        width: 50%
+    }
+    .Tcol3 {
+        width: 33.33%
+    }
+    .Tcol4 {
+        width: 25%
+    }
+    .Tcol5 {
+        width: 20%
+    }
+    .Tcol66 {
+        width: 66.66%
+    }
+    .Tcol75 {
+        width: 75%
+    }
+    .Tcol80 {
+        width: 80%
+    }
+    .Tcolumn2,
+    .Tcolumn50,
+    .Tcolg6 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%
+    }
+    .Tcolumn3,
+    .Tcolg4 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.33%;
+        flex: 0 0 33.33%;
+        max-width: 33.33%
+    }
+    .Tcolumn4,
+    .Tcolg3 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%
+    }
+    .Tcolumn5,
+    .Tcolumn20 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%
+    }
+    .Tcolg8,
+    .Tcolumn66 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 66.66%;
+        flex: 0 0 66.66%;
+        max-width: 66.66%
+    }
+    .Tcolg9,
+    .Tcolumn75 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 75%;
+        flex: 0 0 75%;
+        max-width: 75%
+    }
+    .Tcolumn80 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 80%;
+        flex: 0 0 80%;
+        max-width: 80%
+    }
+    .Tstart {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: start
+    }
+    .Tcenter {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center
+    }
+    .Tend {
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: end
+    }
+    .Tbetween {
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between
+    }
+    .Ttop {
+        -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+        align-items: baseline
+    }
+    .Tmiddle {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center
+    }
+    .Tbottom {
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        align-items: end
+    }
+    .ps {
+        padding: 15px
+    }
+    .pn {
+        padding: 30px
+    }
+    .pb {
+        padding: 45px
+    }
+    .Tps {
+        padding: 18px
+    }
+    .Tpn {
+        padding: 36px
+    }
+    .Tpb {
+        padding: 54px
+    }
+    .Tptn {
+        padding-top: 40px
+    }
+    .Tptb {
+        padding-top: 80px
+    }
+    .Tpbn {
+        padding-bottom: 40px
+    }
+    .Tpbb {
+        padding-bottom: 80px
+    }
+    .prs {
+        padding-right: 15px
+    }
+    .pls {
+        padding-left: 15px
+    }
+    .prn {
+        padding-right: 30px
+    }
+    .pln {
+        padding-left: 30px
+    }
+    .prb {
+        padding-right: 45px
+    }
+    .plb {
+        padding-left: 45px
+    }
+    .Tprs {
+        padding-right: 18px
+    }
+    .pls {
+        padding-left: 18px
+    }
+    .Tprn {
+        padding-right: 36px
+    }
+    .Tpln {
+        padding-left: 36px
+    }
+    .Tprb {
+        padding-right: 54px
+    }
+    .Tplb {
+        padding-left: 54px
+    }
+    .Tp0 {
+        padding: 0
+    }
+    .Tpr0 {
+        padding-right: 0
+    }
+    .Tpl0 {
+        padding-left: 0
+    }
+    .Tpt0 {
+        padding-top: 0
+    }
+    .Tpb0 {
+        padding-bottom: 0
+    }
+    .Tmtn {
+        margin-top: 30px
+    }
+    .Tmtb {
+        margin-top: 45px
+    }
+    .Tmbn {
+        margin-bottom: 30px
+    }
+    .Tmbb {
+        margin-bottom: 45px
+    }
+    .Tm0 {
+        margin: 0
+    }
+    .Tma {
+        margin: auto
+    }
+    .Tmt0 {
+        margin-top: 0
+    }
+    .Tmb0 {
+        margin-bottom: 0
+    }
+    .Tpos {
+        position: static
+    }
+    .Tpor {
+        position: relative
+    }
+    .Tpoa {
+        position: absolute
+    }
+    .Tpof {
+        position: fixed
+    }
+    .Tsticky {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0
+    }
+    .Tr0 {
+        right: 0
+    }
+    .Tl0 {
+        left: 0
+    }
+    .Tt0 {
+        top: 0
+    }
+    .Tb0 {
+        bottom: 0
+    }
+    .Tborder {
+        border: solid 1px transparent
+    }
+    .Tbws {
+        border-width: thin
+    }
+    .Tbwn {
+        border-width: 2px
+    }
+    .Tbwb {
+        border-width: thick
+    }
+    .Tbsdot {
+        border-style: dotted
+    }
+    .Tbsdash {
+        border-style: dashed
+    }
+    .Tbr4 {
+        border-radius: 4px
+    }
+    .Tbr8 {
+        border-radius: 8px
+    }
+    .Tbr16 {
+        border-radius: 16px
+    }
+    .Tbr50 {
+        border-radius: 50px
+    }
+    .Tbrc {
+        border-radius: 50%
+    }
+    .Thidden {
+        visibility: hidden
+    }
+    .Tvisible {
+        visibility: visible
+    }
+    .To0 {
+        opacity: 0
+    }
+    .To50 {
+        opacity: 0.5
+    }
+    .To1 {
+        opacity: 1
+    }
+    .Tover {
+        overflow: unset
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .Tcolumn2,
+    .Tcolumn50,
+    .Tcolg6,
+    .Tcolumn3,
+    .Tcolg4,
+    .Tcolumn4,
+    .Tcolg3,
+    .Tcolumn5,
+    .Tcolumn20,
+    .Tcolg8,
+    .Tcolumn66,
+    .Tcolg9,
+    .Tcolumn75,
+    .Tcolumn80 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%
+    }
+    .Tcol2,
+    .Tcol3,
+    .Tcol4,
+    .Tcol5,
+    .Tcol66,
+    .Tcol75,
+    .Tcol80 {
+        width: 100%
+    }
+    .Mflexed {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-wrap: wrap
+    }
+    .Mflexrowrev {
+        flex-direction: row-reverse
+    }
+    .Mflexcolrev {
+        flex-direction: row-reverse
+    }
+    .Mblocked {
+        display: block
+    }
+    .Mnoned {
+        display: none
+    }
+    .Minlined {
+        display: inline-block
+    }
+    .Mright {
+        float: right
+    }
+    .Mleft {
+        float: left
+    }
+    .Mcolfix {
+        float: none;
+        clear: both
+    }
+    .Mfullheight {
+        min-height: 100vh;
+        height: 100vh
+    }
+    .Mh75 {
+        min-height: 75vh
+    }
+    .Mh66 {
+        min-height: 66vh
+    }
+    .Mhalfheight {
+        min-height: 50vh;
+        height: 50vh
+    }
+    .Mh33 {
+        min-height: 33vh
+    }
+    .Mh25 {
+        min-height: 25vh
+    }
+    .Mhauto {
+        height: auto
+    }
+    .Mmhauto {
+        min-height: auto;
+        max-height: auto
+    }
+    .Mahauto {
+        height: auto;
+        min-height: auto;
+        max-height: auto
+    }
+    .Mnoheight {
+        height: 0
+    }
+    /*mobile width 25 33 50 66 75*/
+    .Mcol2 {
+        width: 50%
+    }
+    .Mcol3 {
+        width: 33.33%
+    }
+    .Mcol4 {
+        width: 25%
+    }
+    .Mcol66 {
+        width: 66.66%
+    }
+    .Mcol75 {
+        width: 75%
+    }
+    .Mcolumn2,
+    .Mcolumn50,
+    .Mcolg6 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%
+    }
+    .Mcolumn3,
+    .Mcolg4 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.33%;
+        flex: 0 0 33.33%;
+        max-width: 33.33%
+    }
+    .Mcolumn4,
+    .Mcolg3 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%
+    }
+    .Mcolg8,
+    .Mcolumn66 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 66.66%;
+        flex: 0 0 66.66%;
+        max-width: 66.66%
+    }
+    .Mcolg9,
+    .Mcolumn75 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 75%;
+        flex: 0 0 75%;
+        max-width: 75%
+    }
+    .Mstart {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: start
+    }
+    .Mcenter {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center
+    }
+    .Mend {
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: end
+    }
+    .Mbetween {
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between
+    }
+    .Mtop {
+        -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+        align-items: baseline
+    }
+    .Mmiddle {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center
+    }
+    .Mbottom {
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        align-items: end
+    }
+    .ps,
+    .Tps {
+        padding: 10px
+    }
+    .pn,
+    .Tpn {
+        padding: 20px
+    }
+    .pb,
+    .Tpb {
+        padding: 30px
+    }
+    .Mps {
+        padding: 15px
+    }
+    .Mpn {
+        padding: 25px
+    }
+    .Mpb {
+        padding: 35px
+    }
+    .prs,
+    .Tprs {
+        padding-right: 10px
+    }
+    .pls,
+    .Tpls {
+        padding-left: 10px
+    }
+    .prn,
+    .Tprn {
+        padding-right: 20px
+    }
+    .pln,
+    .Tpln {
+        padding-left: 20px
+    }
+    .prb,
+    .Tprb {
+        padding-right: 30px
+    }
+    .plb,
+    .Tplb {
+        padding-left: 30px
+    }
+    .Mprs {
+        padding-right: 15px
+    }
+    .Mpls {
+        padding-left: 15px
+    }
+    .Mprn {
+        padding-right: 25px
+    }
+    .Mpln {
+        padding-left: 25px
+    }
+    .Mprb {
+        padding-right: 35px
+    }
+    .Mplb {
+        padding-left: 35px
+    }
+    .Mp0 {
+        padding: 0
+    }
+    .Mpr0 {
+        padding-right: 0
+    }
+    .Mpl0 {
+        padding-left: 0
+    }
+    .Mpt0 {
+        padding-top: 0
+    }
+    .Mpb0 {
+        padding-bottom: 0
+    }
+    .Mm0 {
+        margin: 0
+    }
+    .Mma {
+        margin: auto
+    }
+    .Mmt0 {
+        margin-top: 0
+    }
+    .Mmb0 {
+        margin-bottom: 0
+    }
+    .Mpos {
+        position: static
+    }
+    .Mpor {
+        position: relative
+    }
+    .Mpoa {
+        position: absolute
+    }
+    .Mpof {
+        position: fixed
+    }
+    .Msticky {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0
+    }
+    .Mr0 {
+        right: 0
+    }
+    .Ml0 {
+        left: 0
+    }
+    .Mt0 {
+        top: 0
+    }
+    .Mb0 {
+        bottom: 0
+    }
+    .Mborder {
+        border: solid 1px transparent
+    }
+    .Mbws {
+        border-width: thin
+    }
+    .Mbwn {
+        border-width: 2px
+    }
+    .Mbwb {
+        border-width: thick
+    }
+    .Mbsdot {
+        border-style: dotted
+    }
+    .Mbsdash {
+        border-style: dashed
+    }
+    .Mbr4 {
+        border-radius: 4px
+    }
+    .Mbr8 {
+        border-radius: 8px
+    }
+    .Mbr16 {
+        border-radius: 16px
+    }
+    .Mbr50 {
+        border-radius: 50px
+    }
+    .Mbrc {
+        border-radius: 50%
+    }
+    .Mhidden {
+        visibility: hidden
+    }
+    .Mvisible {
+        visibility: visible
+    }
+    .Mo0 {
+        opacity: 0
+    }
+    .Mo50 {
+        opacity: 0.5
+    }
+    .Mo1 {
+        opacity: 1
+    }
+    .Mover {
+        overflow: unset
+    }
+}
