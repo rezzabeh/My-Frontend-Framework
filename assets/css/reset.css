@@ -1,0 +1,288 @@
+:root {
+    /************************ light ************************/
+    --bgBody: rgb(245, 245, 245);
+    --bgBoxs: rgb(255, 255, 255);
+    --bgbtn: rgba(223, 201, 0, 0.95);
+    --hoverbgbtn: rgba(223, 201, 0, 1);
+    --btncolor: rgb(245, 245, 245);
+    --hoverbtncolor: rgb(245, 245, 245);
+    --shadowcolor: rgba(10, 10, 10, 0.1);
+    --bordercolor: rgba(10, 10, 10, 0.1);
+    --linkcolor: rgba(223, 201, 0, 0.95);
+    --hoverlinkcolor: rgba(223, 201, 0, 1);
+    --headcolor: rgba(10, 10, 10, 1);
+    --textcolor: rgba(10, 10, 10, 0.9);
+    /************************ dark ************************/
+    --bgBodydark: rgb(10, 10, 10);
+    --bgBoxsdark: rgb(0, 0, 0);
+    --bgbtndark: rgba(223, 201, 0, 0.95);
+    --hoverbgbtndark: rgba(223, 201, 0, 1);
+    --btncolordark: rgb(245, 245, 245);
+    --hoverbtncolordark: rgb(245, 245, 245);
+    --shadowcolordark: rgba(245, 245, 245, 0.1);
+    --bordercolordark: rgba(245, 245, 245, 0.1);
+    --linkcolordark: rgba(223, 201, 0, 0.95);
+    --hoverlinkcolordark: rgba(223, 201, 0, 1);
+    --headcolordark: rgba(245, 245, 245, 1);
+    --textcolordark: rgba(245, 245, 245, 0.9);
+    /************************ basecolor ************************/
+    --redcolor: rgb(228, 14, 14);
+    --greencolor: rgb(14, 228, 14);
+    --bluecolor: rgb(14, 14, 228);
+    --whitecolor: rgb(230, 230, 230);
+    --blackcolor: rgb(25, 25, 25);
+    --graycolor: rgb(128, 128, 128);
+}
+
+
+/************************ fonts ************************/
+
+@font-face {
+    font-family: 'mainfont';
+    src: url(../font/main.woff) format("woff")
+}
+
+@font-face {
+    font-family: 'subfont';
+    src: url(../font/sub.ttf) format('truetype')
+}
+
+@font-face {
+    font-family: 'mainfontEn';
+    src: url(../font/Roboto-Regular.ttf) format('truetype')
+}
+
+@font-face {
+    font-family: 'subfontEn';
+    src: url(../font/Lato-Bold.ttf) format('truetype')
+}
+
+
+/************************ reset ************************/
+
+html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--hoverbgbtn) var(--btncolor);
+    scroll-behavior: smooth
+}
+
+html::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: var(--btncolor)
+}
+
+html::-webkit-scrollbar {
+    width: 5px;
+    background-color: var(--btncolor)
+}
+
+html::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--hoverbgbtn)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    box-sizing: -webkit-border-box
+}
+
+article,
+aside,
+figure,
+footer,
+header,
+nav,
+section,
+main {
+    display: block
+}
+
+img {
+    max-width: 100%;
+    height: auto
+}
+
+button,
+input,
+select {
+    all: unset
+}
+
+
+/************************ typography ************************/
+
+body {
+    font-family: mainfontEn;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 400
+}
+
+.rtl {
+    font-family: mainfont;
+    direction: rtl
+}
+
+.txtsize90 {
+    font-size: 0.9rem
+}
+
+.txtsize125 {
+    font-size: 1.25rem
+}
+
+.txtsize150 {
+    font-size: 1.5rem
+}
+
+.txtsize175 {
+    font-size: 1.75rem
+}
+
+.txtsize200 {
+    font-size: 2rem
+}
+
+.txtsize250 {
+    font-size: 2.5rem
+}
+
+.txtsize300 {
+    font-size: 3rem
+}
+
+.txtsize350 {
+    font-size: 3.5rem
+}
+
+.lh100 {
+    line-height: 1
+}
+
+.lh120 {
+    line-height: 1.2
+}
+
+.lh160 {
+    line-height: 1.6
+}
+
+.lh180 {
+    line-height: 1.8
+}
+
+.lh200 {
+    line-height: 2
+}
+
+.fb {
+    font-weight: bold
+}
+
+.fn {
+    font-weight: 500
+}
+
+.fs {
+    font-weight: 100
+}
+
+a {
+    text-decoration: none;
+    color: var(--linkcolor)
+}
+
+a:hover {
+    color: var(--hoverlinkcolor)
+}
+
+h1,
+h1 * {
+    font-size: 1.75rem;
+    line-height: 1.8;
+    font-weight: bold
+}
+
+h2,
+h2 *,
+h3,
+h3 *,
+h4,
+h4 * {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    font-weight: bold
+}
+
+h4,
+h4 *,
+h5,
+h5 *,
+h6,
+h6 *,
+b,
+em,
+strong,
+th,
+a {
+    font-weight: 500
+}
+
+ins,
+del,
+mark,
+u,
+sub,
+sup,
+code,
+cite,
+td {
+    font-size: 0.9rem
+}
+
+nav ul,
+nav ol,
+nav li {
+    list-style-type: none
+}
+
+.subfont {
+    font-family: subfontEn
+}
+
+.rtl .subfont {
+    font-family: subfont
+}
+
+.fa {
+    font-family: 'FontAwesome';
+}
+
+
+/************************ textalign ************************/
+
+.ts {
+    text-align: left
+}
+
+.rtl .ts {
+    text-align: right
+}
+
+.tc {
+    text-align: center
+}
+
+.te {
+    text-align: right
+}
+
+.rtl .te {
+    text-align: left
+}
+
+.tj {
+    text-align: justify
+}
