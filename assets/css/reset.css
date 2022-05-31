@@ -38,12 +38,12 @@
 /************************ fonts ************************/
 
 @font-face {
-    font-family: 'mainfont';
+    font-family: 'mainfontFa';
     src: url(../font/main.woff) format("woff")
 }
 
 @font-face {
-    font-family: 'subfont';
+    font-family: 'subfontFa';
     src: url(../font/sub.ttf) format('truetype')
 }
 
@@ -121,7 +121,7 @@ body {
 }
 
 .rtl {
-    font-family: mainfont;
+    font-family: mainfontFa;
     direction: rtl
 }
 
@@ -253,7 +253,7 @@ nav li {
 }
 
 .rtl .subfont {
-    font-family: subfont
+    font-family: subfontFa
 }
 
 .fa {

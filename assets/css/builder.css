@@ -1,3 +1,4 @@
+/*Planning: 1. variable Sizes 2. Dark and Light Theme */
 /*create layout container(rows(cols)) & displays*/
 
 .container {
@@ -51,8 +52,12 @@
     flex-direction: row-reverse
 }
 
+.flexcol {
+    flex-direction: column
+}
+
 .flexcolrev {
-    flex-direction: row-reverse
+    flex-direction: column-reverse
 }
 
 .blocked {

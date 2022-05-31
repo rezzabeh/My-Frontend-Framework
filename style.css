@@ -1,3 +1,17 @@
 @charset "UTF-8";
 @import "assets/css/reset.css";
 @import "assets/css/builder.css";
+
+.tabC {
+  display: none;
+}
+
+.tabC.show {
+  display: block;
+  background: var(--bluecolor);
+}
+
+.tabT.active {
+  background-color: red;
+  color: white;
+}
