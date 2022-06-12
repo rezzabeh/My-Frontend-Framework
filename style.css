@@ -2,16 +2,226 @@
 @import "assets/css/reset.css";
 @import "assets/css/builder.css";
 
+
+/** horizontal Menu switchers **/
+
+.horizontalMenu ul,
+.horizontalMenu ol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%
+}
+
+.switcher {
+  height: 20px;
+  width: 40px;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  background-color: var(--bgbtn);
+  border: 2px solid var(--bordercolor)
+}
+
+.switcher:hover {
+  background-color: var(--hoverbgbtn);
+  border-color: var(--bordercolordark)
+}
+
+.switcher.active {
+  background-color: var(--bgbtndark);
+  border-color: var(--bordercolordark)
+}
+
+.switcher.active:hover {
+  border-color: var(--bordercolor)
+}
+
+.switcher::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: var(--whitecolor);
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out
+}
+
+.switcher.active::after {
+  left: 50%
+}
+
+
+/** tab **/
+
 .tabC {
   display: none;
 }
 
 .tabC.show {
   display: block;
-  background: var(--bluecolor);
+}
+
+.tabT {
+  cursor: pointer;
+  padding: var(--sizehalf);
+  border: solid 1px transparent
 }
 
 .tabT.active {
-  background-color: red;
-  color: white;
+  background-color: var(--bgbtn);
+  color: var(--btncolor);
+}
+
+.dark .tabT {
+  cursor: pointer;
+  padding: var(--sizehalf);
+  border: solid 1px transparent
+}
+
+.dark .tabT.active {
+  background-color: var(--bgbtndark);
+  color: var(--btncolordark);
+}
+
+
+/** accordion **/
+
+.accC {
+  display: none;
+}
+
+.accT {
+  cursor: pointer;
+  padding: var(--size1);
+  border: solid 1px var(--bordercolor);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.dark .accT {
+  border-color: var(--bordercolordark);
+}
+
+.accT:not(:first-child) {
+  margin-top: var(--sizehalf);
+}
+
+.accT.active,
+.accT.active h2,
+.accT.active h3,
+.accT.active h4,
+.accT.active h5,
+.accT.active h6 {
+  color: var(--linkcolor);
+}
+
+.dark .accT.active,
+.dark .accT.active h2,
+.dark .accT.active h3,
+.dark .accT.active h4,
+.dark .accT.active h5,
+.dark .accT.active h6 {
+  color: var(--linkcolordark);
+}
+
+.accT i:last-of-type {
+  display: none;
+}
+
+.accT.active i:last-of-type {
+  display: inline-block;
+}
+
+.accT.active i:first-of-type {
+  display: none;
+}
+
+.accC {
+  padding: var(--sizehalf);
+}
+
+
+/** popups **/
+
+.popupContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: none;
+  background-color: var(--shadowcolor);
+}
+
+.dark .popupContainer {
+  background-color: var(--shadowcolordark);
+}
+
+.popupContainer.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999999;
+}
+
+.popup {
+  display: none;
+  background-color: var(--bgBoxs);
+}
+
+.dark .popup {
+  background-color: var(--bgBoxsdark);
+}
+
+.popup.show {
+  display: block;
+}
+
+.bigPopup {
+  max-width: var(--maxwidth);
+  padding: var(--size2);
+}
+
+.normPopup {
+  max-width: var(--Tmaxwidth);
+  padding: var(--size1);
+}
+
+.miniPopup {
+  max-width: var(--Mmaxwidth);
+  padding: var(--sizehalf);
+}
+
+/**scroll**/
+#backToTop {
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  padding: 20px;
+  background-color: green;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.progressBar {
+  width: 0;
+  height: 5px;
+  background-color: green;
+}
+
+.progressContainer {
+  z-index: 999;
+  direction: ltr;
 }

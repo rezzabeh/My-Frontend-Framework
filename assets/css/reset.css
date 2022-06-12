@@ -15,14 +15,14 @@
     /************************ dark ************************/
     --bgBodydark: rgb(10, 10, 10);
     --bgBoxsdark: rgb(0, 0, 0);
-    --bgbtndark: rgba(223, 201, 0, 0.95);
-    --hoverbgbtndark: rgba(223, 201, 0, 1);
+    --bgbtndark: rgba(0, 223, 78, 0.95);
+    --hoverbgbtndark: rgba(0, 223, 78, 1);
     --btncolordark: rgb(245, 245, 245);
     --hoverbtncolordark: rgb(245, 245, 245);
     --shadowcolordark: rgba(245, 245, 245, 0.1);
     --bordercolordark: rgba(245, 245, 245, 0.1);
-    --linkcolordark: rgba(223, 201, 0, 0.95);
-    --hoverlinkcolordark: rgba(223, 201, 0, 1);
+    --linkcolordark: rgba(0, 223, 19, 0.95);
+    --hoverlinkcolordark: rgb(0, 223, 37);
     --headcolordark: rgba(245, 245, 245, 1);
     --textcolordark: rgba(245, 245, 245, 0.9);
     /************************ basecolor ************************/
@@ -32,6 +32,18 @@
     --whitecolor: rgb(230, 230, 230);
     --blackcolor: rgb(25, 25, 25);
     --graycolor: rgb(128, 128, 128);
+    /************************ padding margin size ************************/
+    --sizehalf: 0.5rem;
+    --size1: 1rem;
+    --size1-5: 1.5rem;
+    --size2: 2rem;
+    --size2-5: 2.5rem;
+    --size3: 3rem;
+    --size4: 4rem;
+    --size5: 5rem;
+    --maxwidth: 1200px;
+    --Tmaxwidth: 800px;
+    --Mmaxwidth: 400px
 }
 
 
@@ -117,7 +129,14 @@ body {
     font-family: mainfontEn;
     font-size: 16px;
     line-height: 1.4;
-    font-weight: 400
+    font-weight: 400;
+    background-color: var(--bgBody);
+    color: var(--textcolor)
+}
+
+body.dark {
+    background-color: var(--bgBodydark);
+    color: var(--textcolordark)
 }
 
 .rtl {
@@ -189,20 +208,12 @@ body {
     font-weight: 100
 }
 
-a {
-    text-decoration: none;
-    color: var(--linkcolor)
-}
-
-a:hover {
-    color: var(--hoverlinkcolor)
-}
-
 h1,
 h1 * {
     font-size: 1.75rem;
     line-height: 1.8;
-    font-weight: bold
+    font-weight: bold;
+    color: var(--headcolor)
 }
 
 h2,
@@ -213,7 +224,8 @@ h4,
 h4 * {
     font-size: 1.25rem;
     line-height: 1.6;
-    font-weight: bold
+    font-weight: bold;
+    color: var(--headcolor)
 }
 
 h4,
@@ -225,9 +237,28 @@ h6 *,
 b,
 em,
 strong,
-th,
-a {
-    font-weight: 500
+th {
+    font-weight: 500;
+    color: var(--headcolor)
+}
+
+.dark h1,
+.dark h1 *,
+.dark h2,
+.dark h2 *,
+.dark h3,
+.dark h3 *,
+.dark h4,
+.dark h4 *,
+.dark h5,
+.dark h5 *,
+.dark h6,
+.dark h6 *,
+.dark b,
+.dark em,
+.dark strong,
+.dark th {
+    color: var(--headcolordark)
 }
 
 ins,
@@ -257,7 +288,24 @@ nav li {
 }
 
 .fa {
-    font-family: 'FontAwesome';
+    font-family: 'FontAwesome'
+}
+
+a {
+    text-decoration: none;
+    color: var(--linkcolor)
+}
+
+a:hover {
+    color: var(--hoverlinkcolor)
+}
+
+.dark a {
+    color: var(--linkcolordark)
+}
+
+.dark a:hover {
+    color: var(--hoverlinkcolordark)
 }
 
 
