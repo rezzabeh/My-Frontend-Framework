@@ -53,22 +53,22 @@
 
 @font-face {
     font-family: 'mainfontFa';
-    src: url(../fonts/main.woff) format("woff")
+    src: url(../font/main.woff) format("woff")
 }
 
 @font-face {
     font-family: 'subfontFa';
-    src: url(../fonts/sub.ttf) format('truetype')
+    src: url(../font/sub.ttf) format('truetype')
 }
 
 @font-face {
     font-family: 'mainfontEn';
-    src: url(../fonts/Roboto-Regular.ttf) format('truetype')
+    src: url(../font/Roboto-Regular.ttf) format('truetype')
 }
 
 @font-face {
     font-family: 'subfontEn';
-    src: url(../fonts/Lato-Bold.ttf) format('truetype')
+    src: url(../font/Lato-Bold.ttf) format('truetype')
 }
 
 
