@@ -20,8 +20,7 @@
     align-items: center;
     position: relative;
     width: 100%;
-    max-width: 100%;
-    overflow: hidden
+    max-width: 100%
 }
 
 .row {
@@ -34,8 +33,12 @@
     flex-wrap: wrap;
     position: relative;
     width: 100%;
-    max-width: 100%;
-    overflow: hidden
+    max-width: 100%
+}
+
+.limitwidth>.row {
+    max-width: var(--maxwidth);
+    margin: auto
 }
 
 .flexed {
@@ -48,11 +51,36 @@
 }
 
 .flexrowrev {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
     flex-direction: row-reverse
 }
 
+.flexcol {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
 .flexcolrev {
-    flex-direction: row-reverse
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse
+}
+
+.inlineflexed {
+    display: inline-flex
+}
+
+.wraped {
+    flex-wrap: wrap
+}
+
+.nowrap {
+    flex-wrap: nowrap
 }
 
 .blocked {
@@ -80,11 +108,39 @@
     clear: both
 }
 
+.bgbox {
+    background-color: var(--bgBoxs);
+    color: var(--textcolor)
+}
+
+.dark .bgbox {
+    background-color: var(--bgBoxsdark);
+    color: var(--textcolordark)
+}
+
+.bgred {
+    background-color: var(--redcolor);
+    color: var(--whitecolor)
+}
+
+.bgblue {
+    background-color: var(--bluecolor);
+    color: var(--whitecolor)
+}
+
+.bggreen {
+    background-color: var(--greencolor);
+    color: var(--whitecolor)
+}
+
 
 /*height h:height m:min & max a:all*/
 
 .fullheight {
-    min-height: 100vh;
+    height: 100%
+}
+
+.h100 {
     height: 100vh
 }
 
@@ -93,35 +149,19 @@
 }
 
 .h66 {
-    min-height: 66vh
+    min-height: 66.66vh
 }
 
-.halfheight {
-    min-height: 50vh;
-    height: 50vh
+.h50 {
+    min-height: 50vh
 }
 
 .h33 {
-    min-height: 33vh
+    min-height: 33.33vh
 }
 
 .h25 {
     min-height: 25vh
-}
-
-.hauto {
-    height: auto
-}
-
-.mhauto {
-    min-height: auto;
-    max-height: auto
-}
-
-.ahauto {
-    height: auto;
-    min-height: auto;
-    max-height: auto
 }
 
 .noheight {
@@ -129,7 +169,7 @@
 }
 
 
-/*width col:column colg:grid column num/12*/
+/*width colfN (N col from 10) colgN (N col from 12) columnN (100%/N)*/
 
 .col2 {
     width: 50%
@@ -160,7 +200,7 @@
 }
 
 .column1,
-.column100,
+.colf10,
 .colg12 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 100%;
@@ -169,7 +209,7 @@
 }
 
 .column2,
-.column50,
+.colf5,
 .colg6 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 50%;
@@ -194,7 +234,7 @@
 }
 
 .column5,
-.column20 {
+.colf2 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 20%;
     flex: 0 0 20%;
@@ -209,11 +249,25 @@
     max-width: 16.66%
 }
 
+.column7 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 14.28%;
+    flex: 0 0 14.28%;
+    max-width: 14.28%
+}
+
 .column8 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 12.5%;
     flex: 0 0 12.5%;
     max-width: 12.5%
+}
+
+.column9 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 11.11%;
+    flex: 0 0 11.11%;
+    max-width: 11.11%
 }
 
 .colg1 {
@@ -223,6 +277,7 @@
     max-width: 8.33%
 }
 
+.colf1,
 .column10 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 10%;
@@ -230,14 +285,14 @@
     max-width: 10%
 }
 
-.column30 {
+.colf3 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 30%;
     flex: 0 0 30%;
     max-width: 30%
 }
 
-.column40 {
+.colf4 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 40%;
     flex: 0 0 40%;
@@ -258,7 +313,7 @@
     max-width: 58.33%
 }
 
-.column60 {
+.colf6 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 60%;
     flex: 0 0 60%;
@@ -273,7 +328,7 @@
     max-width: 66.66%
 }
 
-.column70 {
+.colf7 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 70%;
     flex: 0 0 70%;
@@ -288,6 +343,7 @@
     max-width: 75%
 }
 
+.colf8,
 .column80 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 80%;
@@ -302,7 +358,7 @@
     max-width: 83.33%
 }
 
-.column90 {
+.colf9 {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 90%;
     flex: 0 0 90%;
@@ -343,6 +399,11 @@
     justify-content: space-between
 }
 
+.around {
+    -ms-flex-pack: distribute;
+    justify-content: space-around
+}
+
 .top {
     -webkit-box-align: baseline;
     -ms-flex-align: baseline;
@@ -361,131 +422,256 @@
     align-items: end
 }
 
-
-/*p:padding m:margin r:right l:left t:top b:bottom s:small n:normal b:big pt:padding texts*/
-
-.pt {
-    padding: 9px
+.stretch {
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch
 }
 
-.ps {
-    padding: 18px
+
+/*p:padding m:margin s:start e:end t:top b:bottom se:start&end ma:margin auto*/
+
+.mt1 {
+    margin-top: var(--size1)
 }
 
-.pn {
-    padding: 36px
+.mt2 {
+    margin-top: var(--size2)
 }
 
-.pb {
-    padding: 72px
+.mt3 {
+    margin-top: var(--size3)
 }
 
-.pts {
-    padding-top: 20px
+.mt4 {
+    margin-top: var(--size4)
 }
 
-.ptn {
-    padding-top: 40px
+.mt5 {
+    margin-top: var(--size5)
 }
 
-.ptb {
-    padding-top: 80px
+.mb1 {
+    margin-bottom: var(--size1)
 }
 
-.pbs {
-    padding-bottom: 20px
+.mb2 {
+    margin-bottom: var(--size2)
 }
 
-.pbn {
-    padding-bottom: 40px
+.mb3 {
+    margin-bottom: var(--size3)
 }
 
-.pbb {
-    padding-bottom: 80px
+.mb4 {
+    margin-bottom: var(--size4)
 }
 
-.prs {
-    padding-right: 18px
+.mb5 {
+    margin-bottom: var(--size5)
 }
 
-.pls {
-    padding-left: 18px
+.mse1 {
+    margin-left: var(--size1);
+    margin-right: var(--size1)
 }
 
-.prn {
-    padding-right: 36px
+.mse2 {
+    margin-left: var(--size2);
+    margin-right: var(--size2)
 }
 
-.pln {
-    padding-left: 36px
+.mse3 {
+    margin-left: var(--size3);
+    margin-right: var(--size3)
 }
 
-.prb {
-    padding-right: 72px
+.mse4 {
+    margin-left: var(--size4);
+    margin-right: var(--size4)
 }
 
-.plb {
-    padding-left: 72px
+.ms0 {
+    -webkit-margin-start: 0;
+    margin-inline-start: 0
 }
 
-.p0 {
-    padding: 0
+.ms1 {
+    -webkit-margin-start: var(--sizehalf);
+    margin-inline-start: var(--sizehalf)
 }
 
-.pr0 {
-    padding-right: 0
+.ms2 {
+    -webkit-margin-start: var(--size1);
+    margin-inline-start: var(--size1)
 }
 
-.pl0 {
-    padding-left: 0
+.ms3 {
+    -webkit-margin-start: var(--size1-5);
+    margin-inline-start: var(--size1-5)
+}
+
+.ms4 {
+    -webkit-margin-start: var(--size2);
+    margin-inline-start: var(--size2)
+}
+
+.me0 {
+    -webkit-margin-end: 0;
+    margin-inline-end: 0
+}
+
+.me1 {
+    -webkit-margin-end: var(--sizehalf);
+    margin-inline-end: var(--sizehalf)
+}
+
+.me2 {
+    -webkit-margin-end: var(--size1);
+    margin-inline-end: var(--size1)
+}
+
+.me3 {
+    -webkit-margin-end: var(--size1-5);
+    margin-inline-end: var(--size1-5)
+}
+
+.me4 {
+    -webkit-margin-end: var(--size2);
+    margin-inline-end: var(--size2)
+}
+
+.ma {
+    margin-left: auto;
+    margin-right: auto
+}
+
+.p1 {
+    padding: var(--size1)
+}
+
+.p2 {
+    padding: var(--size2)
+}
+
+.p3 {
+    padding: var(--size3)
+}
+
+.p4 {
+    padding: var(--size4)
+}
+
+.p5 {
+    padding: var(--size5)
+}
+
+.ps0 {
+    -webkit-padding-start: 0;
+    padding-inline-start: 0
+}
+
+.ps1 {
+    -webkit-padding-start: var(--sizehalf);
+    padding-inline-start: var(--sizehalf)
+}
+
+.ps2 {
+    -webkit-padding-start: var(--size1);
+    padding-inline-start: var(--size1)
+}
+
+.ps3 {
+    -webkit-padding-start: var(--size1-5);
+    padding-inline-start: var(--size1-5)
+}
+
+.ps4 {
+    -webkit-padding-start: var(--size2);
+    padding-inline-start: var(--size2)
+}
+
+.ps5 {
+    -webkit-padding-start: var(--size2-5);
+    padding-inline-start: var(--size2-5)
+}
+
+.pe0 {
+    -webkit-padding-end: 0;
+    padding-inline-end: 0
+}
+
+.pe1 {
+    -webkit-padding-end: var(--sizehalf);
+    padding-inline-end: var(--sizehalf)
+}
+
+.pe2 {
+    -webkit-padding-end: var(--size1);
+    padding-inline-end: var(--size1)
+}
+
+.pe3 {
+    -webkit-padding-end: var(--size1-5);
+    padding-inline-end: var(--size1-5)
+}
+
+.pe4 {
+    -webkit-padding-end: var(--size2);
+    padding-inline-end: var(--size2)
+}
+
+.pe5 {
+    -webkit-padding-end: var(--size2-5);
+    padding-inline-end: var(--size2-5)
 }
 
 .pt0 {
     padding-top: 0
 }
 
+.pt1 {
+    padding-top: var(--sizehalf)
+}
+
+.pt2 {
+    padding-top: var(--size1)
+}
+
+.pt3 {
+    padding-top: var(--size1-5)
+}
+
+.pt4 {
+    padding-top: var(--size2)
+}
+
+.pt5 {
+    padding-top: var(--size2-5)
+}
+
 .pb0 {
     padding-bottom: 0
 }
 
-.mts {
-    margin-top: 15px
+.pb1 {
+    padding-bottom: var(--sizehalf)
 }
 
-.mtn {
-    margin-top: 30px
+.pb2 {
+    padding-bottom: var(--size1)
 }
 
-.mtb {
-    margin-top: 45px
+.pb3 {
+    padding-bottom: var(--size1-5)
 }
 
-.mbs {
-    margin-bottom: 15px
+.pb4 {
+    padding-bottom: var(--size2)
 }
 
-.mbn {
-    margin-bottom: 30px
-}
-
-.mbb {
-    margin-bottom: 45px
-}
-
-.m0 {
-    margin: 0
-}
-
-.ma {
-    margin: auto
-}
-
-.mt0 {
-    margin-top: 0
-}
-
-.mb0 {
-    margin-bottom: 0
+.pb5 {
+    padding-bottom: var(--size2-5)
 }
 
 
@@ -548,6 +734,22 @@
     bottom: 0
 }
 
+.z3 {
+    z-index: 333;
+}
+
+.z5 {
+    z-index: 5555;
+}
+
+.z7 {
+    z-index: 77777;
+}
+
+.z9 {
+    z-index: 999999;
+}
+
 
 /*box shadow appbox pcbox oopsbox*/
 
@@ -590,51 +792,51 @@
     border: solid 1px transparent
 }
 
-.bws {
+.borderthin {
     border-width: thin
 }
 
-.bwn {
+.border2px {
     border-width: 2px
 }
 
-.bwb {
+.borderthick {
     border-width: thick
 }
 
-.bsdot {
+.borderdot {
     border-style: dotted
 }
 
-.bsdash {
+.borderdash {
     border-style: dashed
 }
 
-.bc {
+.bordercolor {
     border-color: var(--bordercolor)
 }
 
-.dark .bc {
+.dark .bordercolor {
     border-color: var(--bordercolordark)
 }
 
-.br4 {
+.bradius1 {
     border-radius: 4px
 }
 
-.br8 {
-    border-radius: 8px
+.bradius2 {
+    border-radius: 0.5rem
 }
 
-.br16 {
-    border-radius: 16px
+.bradius3 {
+    border-radius: 1rem
 }
 
-.br50 {
-    border-radius: 50px
+.bradius4 {
+    border-radius: 3rem
 }
 
-.brc {
+.bradius5 {
     border-radius: 50%
 }
 
@@ -642,15 +844,15 @@
 /*button btn simple radius circle*/
 
 .btn {
+    display: inline-block;
+    cursor: pointer;
     background-color: var(--bgbtn);
-    color: var(--btncolor);
-    display: inline-block
+    color: var(--btncolor)
 }
 
 .dark .btn {
     background-color: var(--bgbtndark);
-    color: var(--btncolordark);
-    display: inline-block
+    color: var(--btncolordark)
 }
 
 .btn:hover {
@@ -661,6 +863,18 @@
 .dark .btn:hover {
     background-color: var(--hoverbgbtndark);
     color: var(--hoverbtncolordark)
+}
+
+.btn1 {
+    padding: var(--sizehalf)
+}
+
+.btn2 {
+    padding: var(--sizehalf) var(--size1)
+}
+
+.btn3 {
+    padding: var(--sizehalf) var(--size1-5)
 }
 
 
@@ -690,11 +904,23 @@
     overflow: unset
 }
 
+.overhide {
+    overflow: hidden
+}
+
+.overxhide {
+    overflow-x: hidden
+}
+
 .point {
     cursor: pointer
 }
 
-@media screen and (max-width: 1024px) {
+@media only screen and (max-width: 1024px) {
+    .limitwidth>.row {
+        max-width: var(--Tmaxwidth);
+        margin: auto
+    }
     .col2,
     .col3,
     .col4,
@@ -726,18 +952,22 @@
     .column4,
     .column5,
     .column6,
+    .column7,
     .column8,
-    .column10,
-    .column20,
-    .column30,
-    .column40,
-    .column50,
-    .column60,
+    .column9,
     .column66,
-    .column70,
     .column75,
     .column80,
-    .column90 {
+    .column10,
+    .colf1,
+    .colf2,
+    .colf3,
+    .colf4,
+    .colf5,
+    .colf6,
+    .colf7,
+    .colf8,
+    .colf9 {
         -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
         flex: 0 0 100%;
@@ -751,11 +981,38 @@
         display: flex;
         flex-wrap: wrap
     }
+    .Tflexrow {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row
+    }
     .Tflexrowrev {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
         flex-direction: row-reverse
     }
+    .Tflexcol {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column
+    }
     .Tflexcolrev {
-        flex-direction: row-reverse
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse
+    }
+    .Tinlineflexed {
+        display: inline-flex
+    }
+    .Twraped {
+        flex-wrap: wrap
+    }
+    .Tnowrap {
+        flex-wrap: nowrap
     }
     .Tblocked {
         display: block
@@ -777,33 +1034,34 @@
         clear: both
     }
     .Tfullheight {
-        min-height: 100vh;
+        height: 100%
+    }
+    .Th100 {
         height: 100vh
     }
     .Th75 {
         min-height: 75vh
     }
     .Th66 {
-        min-height: 66vh
+        min-height: 66.66vh
     }
-    .Thalfheight {
-        min-height: 50vh;
-        height: 50vh
+    .Th50 {
+        min-height: 50vh
     }
     .Th33 {
-        min-height: 33vh
+        min-height: 33.33vh
     }
     .Th25 {
         min-height: 25vh
     }
-    .Thauto {
+    .Tautoheight {
         height: auto
     }
     .Tmhauto {
         min-height: auto;
         max-height: auto
     }
-    .Tahauto {
+    .Tallhauto {
         height: auto;
         min-height: auto;
         max-height: auto
@@ -834,7 +1092,7 @@
         width: 80%
     }
     .Tcolumn2,
-    .Tcolumn50,
+    .Tcolf5,
     .Tcolg6 {
         -webkit-box-flex: 0;
         -ms-flex: 0 0 50%;
@@ -856,7 +1114,7 @@
         max-width: 25%
     }
     .Tcolumn5,
-    .Tcolumn20 {
+    .Tcolf2 {
         -webkit-box-flex: 0;
         -ms-flex: 0 0 20%;
         flex: 0 0 20%;
@@ -876,6 +1134,7 @@
         flex: 0 0 75%;
         max-width: 75%
     }
+    .Tcolf8,
     .Tcolumn80 {
         -webkit-box-flex: 0;
         -ms-flex: 0 0 80%;
@@ -917,110 +1176,194 @@
         -ms-flex-align: end;
         align-items: end
     }
-    .ps {
-        padding: 15px
+    .Tmt0 {
+        margin-top: 0
     }
-    .pn {
-        padding: 30px
+    .Tmt1 {
+        margin-top: var(--size1)
     }
-    .pb {
-        padding: 45px
+    .Tmt2 {
+        margin-top: var(--size2)
     }
-    .Tps {
-        padding: 18px
+    .Tmt3 {
+        margin-top: var(--size3)
     }
-    .Tpn {
-        padding: 36px
+    .Tmt4 {
+        margin-top: var(--size4)
     }
-    .Tpb {
-        padding: 54px
+    .Tmb0 {
+        margin-bottom: 0
     }
-    .Tptn {
-        padding-top: 40px
+    .Tmb1 {
+        margin-bottom: var(--size1)
     }
-    .Tptb {
-        padding-top: 80px
+    .Tmb2 {
+        margin-bottom: var(--size2)
     }
-    .Tpbn {
-        padding-bottom: 40px
+    .Tmb3 {
+        margin-bottom: var(--size3)
     }
-    .Tpbb {
-        padding-bottom: 80px
+    .Tmb4 {
+        margin-bottom: var(--size4)
     }
-    .prs {
-        padding-right: 15px
+    .Tmse1 {
+        margin-left: var(--size1);
+        margin-right: var(--size1)
     }
-    .pls {
-        padding-left: 15px
+    .Tmse2 {
+        margin-left: var(--size2);
+        margin-right: var(--size2)
     }
-    .prn {
-        padding-right: 30px
+    .Tmse3 {
+        margin-left: var(--size3);
+        margin-right: var(--size3)
     }
-    .pln {
-        padding-left: 30px
+    .Tmse4 {
+        margin-left: var(--size4);
+        margin-right: var(--size4)
     }
-    .prb {
-        padding-right: 45px
+    .Tms0 {
+        -webkit-margin-start: 0;
+        margin-inline-start: 0
     }
-    .plb {
-        padding-left: 45px
+    .Tms1 {
+        -webkit-margin-start: var(--sizehalf);
+        margin-inline-start: var(--sizehalf)
     }
-    .Tprs {
-        padding-right: 18px
+    .Tms2 {
+        -webkit-margin-start: var(--size1);
+        margin-inline-start: var(--size1)
     }
-    .pls {
-        padding-left: 18px
+    .Tms3 {
+        -webkit-margin-start: var(--size1-5);
+        margin-inline-start: var(--size1-5)
     }
-    .Tprn {
-        padding-right: 36px
+    .Tms4 {
+        -webkit-margin-start: var(--size2);
+        margin-inline-start: var(--size2)
     }
-    .Tpln {
-        padding-left: 36px
+    .Tme0 {
+        -webkit-margin-end: 0;
+        margin-inline-end: 0
     }
-    .Tprb {
-        padding-right: 54px
+    .Tme1 {
+        -webkit-margin-end: var(--sizehalf);
+        margin-inline-end: var(--sizehalf)
     }
-    .Tplb {
-        padding-left: 54px
+    .Tme2 {
+        -webkit-margin-end: var(--size1);
+        margin-inline-end: var(--size1)
+    }
+    .Tme3 {
+        -webkit-margin-end: var(--size1-5);
+        margin-inline-end: var(--size1-5)
+    }
+    .Tme4 {
+        -webkit-margin-end: var(--size2);
+        margin-inline-end: var(--size2)
+    }
+    .Tma {
+        margin-left: auto;
+        margin-right: auto
     }
     .Tp0 {
         padding: 0
     }
-    .Tpr0 {
-        padding-right: 0
+    .Tp1 {
+        padding: var(--size1)
     }
-    .Tpl0 {
-        padding-left: 0
+    .Tp2 {
+        padding: var(--size2)
+    }
+    .Tp3 {
+        padding: var(--size3)
+    }
+    .Tp4 {
+        padding: var(--size4)
+    }
+    .Tps0 {
+        -webkit-padding-start: 0;
+        padding-inline-start: 0
+    }
+    .Tps1 {
+        -webkit-padding-start: var(--sizehalf);
+        padding-inline-start: var(--sizehalf)
+    }
+    .Tps2 {
+        -webkit-padding-start: var(--size1);
+        padding-inline-start: var(--size1)
+    }
+    .Tps3 {
+        -webkit-padding-start: var(--size1-5);
+        padding-inline-start: var(--size1-5)
+    }
+    .Tps4 {
+        -webkit-padding-start: var(--size2);
+        padding-inline-start: var(--size2)
+    }
+    .Tps5 {
+        -webkit-padding-start: var(--size2-5);
+        padding-inline-start: var(--size2-5)
+    }
+    .Tpe0 {
+        -webkit-padding-end: 0;
+        padding-inline-end: 0
+    }
+    .Tpe1 {
+        -webkit-padding-end: var(--sizehalf);
+        padding-inline-end: var(--sizehalf)
+    }
+    .Tpe2 {
+        -webkit-padding-end: var(--size1);
+        padding-inline-end: var(--size1)
+    }
+    .Tpe3 {
+        -webkit-padding-end: var(--size1-5);
+        padding-inline-end: var(--size1-5)
+    }
+    .Tpe4 {
+        -webkit-padding-end: var(--size2);
+        padding-inline-end: var(--size2)
+    }
+    .Tpe5 {
+        -webkit-padding-end: var(--size2-5);
+        padding-inline-end: var(--size2-5)
     }
     .Tpt0 {
         padding-top: 0
     }
+    .Tpt1 {
+        padding-top: var(--sizehalf)
+    }
+    .Tpt2 {
+        padding-top: var(--size1)
+    }
+    .Tpt3 {
+        padding-top: var(--size1-5)
+    }
+    .Tpt4 {
+        padding-top: var(--size2)
+    }
+    .Tpt5 {
+        padding-top: var(--size2-5)
+    }
     .Tpb0 {
         padding-bottom: 0
     }
-    .Tmtn {
-        margin-top: 30px
+    .Tpb1 {
+        padding-bottom: var(--sizehalf)
     }
-    .Tmtb {
-        margin-top: 45px
+    .Tpb2 {
+        padding-bottom: var(--size1)
     }
-    .Tmbn {
-        margin-bottom: 30px
+    .Tpb3 {
+        padding-bottom: var(--size1-5)
     }
-    .Tmbb {
-        margin-bottom: 45px
+    .Tpb4 {
+        padding-bottom: var(--size2)
     }
-    .Tm0 {
-        margin: 0
-    }
-    .Tma {
-        margin: auto
-    }
-    .Tmt0 {
-        margin-top: 0
-    }
-    .Tmb0 {
-        margin-bottom: 0
+    .Tpb5 {
+        padding-bottom: var(--size2-5)
     }
     .Tpos {
         position: static
@@ -1054,34 +1397,34 @@
     .Tborder {
         border: solid 1px transparent
     }
-    .Tbws {
+    .Tborderthin {
         border-width: thin
     }
-    .Tbwn {
+    .Tborder2px {
         border-width: 2px
     }
-    .Tbwb {
+    .Tborderthick {
         border-width: thick
     }
-    .Tbsdot {
+    .Tborderdot {
         border-style: dotted
     }
-    .Tbsdash {
+    .Tborderdash {
         border-style: dashed
     }
-    .Tbr4 {
+    .Tbradius1 {
         border-radius: 4px
     }
-    .Tbr8 {
-        border-radius: 8px
+    .Tbradius2 {
+        border-radius: 0.5rem
     }
-    .Tbr16 {
-        border-radius: 16px
+    .Tbradius3 {
+        border-radius: 1rem
     }
-    .Tbr50 {
-        border-radius: 50px
+    .Tbradius4 {
+        border-radius: 3rem
     }
-    .Tbrc {
+    .Tbradius5 {
         border-radius: 50%
     }
     .Thidden {
@@ -1102,23 +1445,34 @@
     .Tover {
         overflow: unset
     }
+    .Toverhide {
+        overflow: hidden
+    }
+    .Toverxhide {
+        overflow-x: hidden
+    }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
+    .limitwidth>.row {
+        max-width: var(--Mmaxwidth);
+        margin: auto
+    }
     .Tcolumn2,
-    .Tcolumn50,
+    .Tcolf5,
     .Tcolg6,
     .Tcolumn3,
     .Tcolg4,
     .Tcolumn4,
     .Tcolg3,
     .Tcolumn5,
-    .Tcolumn20,
+    .Tcolf2,
     .Tcolg8,
     .Tcolumn66,
     .Tcolg9,
     .Tcolumn75,
-    .Tcolumn80 {
+    .Tcolumn80,
+    .Tcolf8 {
         -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
         flex: 0 0 100%;
@@ -1141,11 +1495,38 @@
         display: flex;
         flex-wrap: wrap
     }
+    .Mflexrow {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row
+    }
     .Mflexrowrev {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
         flex-direction: row-reverse
     }
+    .Mflexcol {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column
+    }
     .Mflexcolrev {
-        flex-direction: row-reverse
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse
+    }
+    .Minlineflexed {
+        display: inline-flex
+    }
+    .Mwraped {
+        flex-wrap: wrap
+    }
+    .Mnowrap {
+        flex-wrap: nowrap
     }
     .Mblocked {
         display: block
@@ -1167,33 +1548,34 @@
         clear: both
     }
     .Mfullheight {
-        min-height: 100vh;
+        height: 100%
+    }
+    .Mh100 {
         height: 100vh
     }
     .Mh75 {
         min-height: 75vh
     }
     .Mh66 {
-        min-height: 66vh
+        min-height: 66.66vh
     }
-    .Mhalfheight {
-        min-height: 50vh;
-        height: 50vh
+    .Mh50 {
+        min-height: 50vh
     }
     .Mh33 {
-        min-height: 33vh
+        min-height: 33.33vh
     }
     .Mh25 {
         min-height: 25vh
     }
-    .Mhauto {
+    .Mautoheight {
         height: auto
     }
     .Mmhauto {
         min-height: auto;
         max-height: auto
     }
-    .Mahauto {
+    .Mallhauto {
         height: auto;
         min-height: auto;
         max-height: auto
@@ -1218,7 +1600,7 @@
         width: 75%
     }
     .Mcolumn2,
-    .Mcolumn50,
+    .Mcolf5,
     .Mcolg6 {
         -webkit-box-flex: 0;
         -ms-flex: 0 0 50%;
@@ -1288,95 +1670,181 @@
         -ms-flex-align: end;
         align-items: end
     }
-    .ps,
-    .Tps {
-        padding: 10px
+    .Mmt0 {
+        margin-top: 0
     }
-    .pn,
-    .Tpn {
-        padding: 20px
+    .Mmt1 {
+        margin-top: var(--size1)
     }
-    .pb,
-    .Tpb {
-        padding: 30px
+    .Mmt2 {
+        margin-top: var(--size2)
     }
-    .Mps {
-        padding: 15px
+    .Mmt3 {
+        margin-top: var(--size3)
     }
-    .Mpn {
-        padding: 25px
+    .Mmb0 {
+        margin-bottom: 0
     }
-    .Mpb {
-        padding: 35px
+    .Mmb1 {
+        margin-bottom: var(--size1)
     }
-    .prs,
-    .Tprs {
-        padding-right: 10px
+    .Mmb2 {
+        margin-bottom: var(--size2)
     }
-    .pls,
-    .Tpls {
-        padding-left: 10px
+    .Mmb3 {
+        margin-bottom: var(--size3)
     }
-    .prn,
-    .Tprn {
-        padding-right: 20px
+    .Mmse1 {
+        margin-left: var(--size1);
+        margin-right: var(--size1)
     }
-    .pln,
-    .Tpln {
-        padding-left: 20px
+    .Mmse2 {
+        margin-left: var(--size2);
+        margin-right: var(--size2)
     }
-    .prb,
-    .Tprb {
-        padding-right: 30px
+    .Mmse3 {
+        margin-left: var(--size3);
+        margin-right: var(--size3)
     }
-    .plb,
-    .Tplb {
-        padding-left: 30px
+    .Mms0 {
+        -webkit-margin-start: 0;
+        margin-inline-start: 0
     }
-    .Mprs {
-        padding-right: 15px
+    .Mms1 {
+        -webkit-margin-start: var(--sizehalf);
+        margin-inline-start: var(--sizehalf)
     }
-    .Mpls {
-        padding-left: 15px
+    .Mms2 {
+        -webkit-margin-start: var(--size1);
+        margin-inline-start: var(--size1)
     }
-    .Mprn {
-        padding-right: 25px
+    .Mms3 {
+        -webkit-margin-start: var(--size1-5);
+        margin-inline-start: var(--size1-5)
     }
-    .Mpln {
-        padding-left: 25px
+    .Mms4 {
+        -webkit-margin-start: var(--size2);
+        margin-inline-start: var(--size2)
     }
-    .Mprb {
-        padding-right: 35px
+    .Mme0 {
+        -webkit-margin-end: 0;
+        margin-inline-end: 0
     }
-    .Mplb {
-        padding-left: 35px
+    .Mme1 {
+        -webkit-margin-end: var(--sizehalf);
+        margin-inline-end: var(--sizehalf)
+    }
+    .Mme2 {
+        -webkit-margin-end: var(--size1);
+        margin-inline-end: var(--size1)
+    }
+    .Mme3 {
+        -webkit-margin-end: var(--size1-5);
+        margin-inline-end: var(--size1-5)
+    }
+    .Mme4 {
+        -webkit-margin-end: var(--size2);
+        margin-inline-end: var(--size2)
+    }
+    .Mma {
+        margin-left: auto;
+        margin-right: auto
     }
     .Mp0 {
         padding: 0
     }
-    .Mpr0 {
-        padding-right: 0
+    .Mp1 {
+        padding: var(--size1)
     }
-    .Mpl0 {
-        padding-left: 0
+    .Mp2 {
+        padding: var(--size2)
+    }
+    .Mp3 {
+        padding: var(--size3)
+    }
+    .Mps0 {
+        -webkit-padding-start: 0;
+        padding-inline-start: 0
+    }
+    .Mps1 {
+        -webkit-padding-start: var(--sizehalf);
+        padding-inline-start: var(--sizehalf)
+    }
+    .Mps2 {
+        -webkit-padding-start: var(--size1);
+        padding-inline-start: var(--size1)
+    }
+    .Mps3 {
+        -webkit-padding-start: var(--size1-5);
+        padding-inline-start: var(--size1-5)
+    }
+    .Mps4 {
+        -webkit-padding-start: var(--size2);
+        padding-inline-start: var(--size2)
+    }
+    .Mps5 {
+        -webkit-padding-start: var(--size2-5);
+        padding-inline-start: var(--size2-5)
+    }
+    .Mpe0 {
+        -webkit-padding-end: 0;
+        padding-inline-end: 0
+    }
+    .Mpe1 {
+        -webkit-padding-end: var(--sizehalf);
+        padding-inline-end: var(--sizehalf)
+    }
+    .Mpe2 {
+        -webkit-padding-end: var(--size1);
+        padding-inline-end: var(--size1)
+    }
+    .Mpe3 {
+        -webkit-padding-end: var(--size1-5);
+        padding-inline-end: var(--size1-5)
+    }
+    .Mpe4 {
+        -webkit-padding-end: var(--size2);
+        padding-inline-end: var(--size2)
+    }
+    .Mpe5 {
+        -webkit-padding-end: var(--size2-5);
+        padding-inline-end: var(--size2-5)
     }
     .Mpt0 {
         padding-top: 0
     }
+    .Mpt1 {
+        padding-top: var(--sizehalf)
+    }
+    .Mpt2 {
+        padding-top: var(--size1)
+    }
+    .Mpt3 {
+        padding-top: var(--size1-5)
+    }
+    .Mpt4 {
+        padding-top: var(--size2)
+    }
+    .Mpt5 {
+        padding-top: var(--size2-5)
+    }
     .Mpb0 {
         padding-bottom: 0
     }
-    .Mm0 {
-        margin: 0
+    .Mpb1 {
+        padding-bottom: var(--sizehalf)
     }
-    .Mma {
-        margin: auto
+    .Mpb2 {
+        padding-bottom: var(--size1)
     }
-    .Mmt0 {
-        margin-top: 0
+    .Mpb3 {
+        padding-bottom: var(--size1-5)
     }
-    .Mmb0 {
-        margin-bottom: 0
+    .Mpb4 {
+        padding-bottom: var(--size2)
+    }
+    .Mpb5 {
+        padding-bottom: var(--size2-5)
     }
     .Mpos {
         position: static
@@ -1410,34 +1878,34 @@
     .Mborder {
         border: solid 1px transparent
     }
-    .Mbws {
+    .Mborderthin {
         border-width: thin
     }
-    .Mbwn {
+    .Mborder2px {
         border-width: 2px
     }
-    .Mbwb {
+    .Mborderthick {
         border-width: thick
     }
-    .Mbsdot {
+    .Mborderdot {
         border-style: dotted
     }
-    .Mbsdash {
+    .Mborderdash {
         border-style: dashed
     }
-    .Mbr4 {
+    .Mbradius1 {
         border-radius: 4px
     }
-    .Mbr8 {
-        border-radius: 8px
+    .Mbradius2 {
+        border-radius: 0.5rem
     }
-    .Mbr16 {
-        border-radius: 16px
+    .Mbradius3 {
+        border-radius: 1rem
     }
-    .Mbr50 {
-        border-radius: 50px
+    .Mbradius4 {
+        border-radius: 3rem
     }
-    .Mbrc {
+    .Mbradius5 {
         border-radius: 50%
     }
     .Mhidden {
@@ -1457,5 +1925,11 @@
     }
     .Mover {
         overflow: unset
+    }
+    .Moverhide {
+        overflow: hidden
+    }
+    .Moverxhide {
+        overflow-x: hidden
     }
 }
