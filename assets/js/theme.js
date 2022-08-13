@@ -212,9 +212,17 @@ jQuery(document).ready(function() {
                 let currentSlider = jQuery(this).parents(".dynamicSlider");
                 let currentDSIndex = jQuery(".dynamicSlider").index(jQuery(this).parents(".dynamicSlider"));
                 let dotteIndex = jQuery(this).index();
+                let currentDSShower;
+                if (jQuery(window).width() > 1024) {
+                    currentDSShower = (currentSlider.data("slider").shower && currentSlider.data("slider").shower <= 10) ? currentSlider.data("slider").shower : 4;
+                } else if (jQuery(window).width() > 768) {
+                    currentDSShower = 2;
+                } else {
+                    currentDSShower = 1;
+                }
                 jQuery(this).siblings().removeClass("active");
                 jQuery(this).addClass("active");
-                goToSlide(currentSlider, currentDSIndex, dotteIndex);
+                goToSlide(currentSlider, currentDSShower, currentDSIndex, dotteIndex);
             });
         }
 
@@ -242,10 +250,8 @@ jQuery(document).ready(function() {
             }
         }
 
-        function goToSlide(cntDS, cntDSIndex, dotIndex) {
-            let cntDSParam = cntDS.data("slider");
-            let cntDSLength = cntDS.find(".dsSlides").first().find(".slide").length;
-            let cntDSTranslate = (cntDSParam.shower && cntDSParam.shower <= 10 && cntDSParam.shower <= cntDSLength) ? (100 / (cntDSParam.shower)) : 25;
+        function goToSlide(cntDS, cntDSShower, cntDSIndex, dotIndex) {
+            let cntDSTranslate = 100 / cntDSShower;
             currentMargin[cntDSIndex] = dotIndex * cntDSTranslate * -1;
             cntDS.find(".dsSlides").first().css({ "margin-inline-start": currentMargin[cntDSIndex] + "%" });
         }
