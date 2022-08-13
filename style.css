@@ -1,3 +1,532 @@
 @charset "UTF-8";
 @import "assets/css/reset.css";
 @import "assets/css/builder.css";
+
+/** horizontal Menu switchers **/
+
+.horizontalMenu ul,
+.horizontalMenu ol {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100%
+}
+
+.switcher {
+    height: 20px;
+    width: 40px;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    background-color: var(--bgbtn);
+    border: 2px solid var(--bordercolor)
+}
+
+.switcher:hover {
+    background-color: var(--hoverbgbtn);
+    border-color: var(--bordercolordark)
+}
+
+.switcher.active {
+    background-color: var(--bgbtndark);
+    border-color: var(--bordercolordark)
+}
+
+.switcher.active:hover {
+    border-color: var(--bordercolor)
+}
+
+.switcher::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: var(--whitecolor);
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out
+}
+
+.switcher.active::after {
+    left: 50%
+}
+
+
+/** tab **/
+
+.tabC {
+    display: none;
+    opacity: 0
+}
+
+.tabC.show {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.4s linear
+}
+
+.tabT {
+    cursor: pointer;
+    padding: var(--sizehalf);
+    border: solid 1px transparent
+}
+
+.tabT.active {
+    background-color: var(--bgbtn);
+    color: var(--btncolor)
+}
+
+.dark .tabT {
+    padding: var(--sizehalf)
+}
+
+.dark .tabT.active {
+    background-color: var(--bgbtndark);
+    color: var(--btncolordark)
+}
+
+
+/** accordion **/
+
+.accC {
+    display: none
+}
+
+.accT {
+    cursor: pointer;
+    padding: var(--size1);
+    border: solid 1px var(--bordercolor);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+.dark .accT {
+    border-color: var(--bordercolordark)
+}
+
+.accT:not(:first-child) {
+    margin-top: var(--sizehalf)
+}
+
+.accT.active,
+.accT.active h2,
+.accT.active h3,
+.accT.active h4,
+.accT.active h5,
+.accT.active h6 {
+    color: var(--linkcolor)
+}
+
+.dark .accT.active,
+.dark .accT.active h2,
+.dark .accT.active h3,
+.dark .accT.active h4,
+.dark .accT.active h5,
+.dark .accT.active h6 {
+    color: var(--linkcolordark)
+}
+
+.accT i:last-of-type {
+    display: none
+}
+
+.accT.active i:last-of-type {
+    display: inline-block
+}
+
+.accT.active i:first-of-type {
+    display: none
+}
+
+.accC {
+    padding: var(--sizehalf)
+}
+
+
+/** popups **/
+
+.popupContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+    background-color: var(--shadowcolor)
+}
+
+.dark .popupContainer {
+    background-color: var(--shadowcolordark)
+}
+
+.popupContainer.active {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.popup {
+    display: none;
+    background-color: var(--bgBoxs)
+}
+
+.dark .popup {
+    background-color: var(--bgBoxsdark)
+}
+
+.popup.show {
+    display: block
+}
+
+.bigPopup {
+    max-width: var(--maxwidth);
+    padding: var(--size2)
+}
+
+.normPopup {
+    max-width: var(--Tmaxwidth);
+    padding: var(--size1)
+}
+
+.miniPopup {
+    max-width: var(--Mmaxwidth);
+    padding: var(--sizehalf)
+}
+
+
+/** back to top & progress bar **/
+
+#backTop {
+    left: var(--size2);
+    bottom: var(--size1);
+    background-color: rgba(200, 200, 200, 0.5)
+}
+
+.rtl #backTop {
+    left: unset;
+    right: var(--size2)
+}
+
+.dark #backTop {
+    background-color: rgba(55, 55, 55, 0.5)
+}
+
+#progressBar {
+    width: 0;
+    height: 5px;
+    background-color: var(--bgbtn)
+}
+
+.dark #progressBar {
+    background-color: var(--bgbtndark)
+}
+
+
+/**flip box**/
+
+.flipCard {
+    max-width: 100%;
+    height: 300px;
+    perspective: 1000px
+}
+
+.flipContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.85s;
+    transform-style: preserve-3d
+}
+
+.flipCard:hover .flipContainer.flipLeft,
+.flipCard.hover .flipContainer.flipLeft {
+    transform: rotateY(-180deg)
+}
+
+.flipCard:hover .flipContainer.flipRight,
+.flipCard.hover .flipContainer.flipRight {
+    transform: rotateY(180deg)
+}
+
+.flipCard:hover .flipContainer.flipUp,
+.flipCard.hover .flipContainer.flipUp {
+    transform: rotateX(180deg)
+}
+
+.flipCard:hover .flipContainer.flipDown,
+.flipCard.hover .flipContainer.flipDown {
+    transform: rotateX(-180deg)
+}
+
+.flipFront,
+.flipBack {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    overflow-y: auto;
+    scrollbar-width: none
+}
+
+.flipBack::-webkit-scrollbar,
+.flipFront::-webkit-scrollbar {
+    width: 0
+}
+
+.flipLeft .flipBack {
+    transform: rotateY(-180deg)
+}
+
+.flipRight .flipBack {
+    transform: rotateY(180deg)
+}
+
+.flipUp .flipBack {
+    transform: rotateX(180deg)
+}
+
+.flipDown .flipBack {
+    transform: rotateX(-180deg)
+}
+
+
+/** animations **/
+
+.animate {
+    transition: opacity, transform ease;
+    transition-duration: 1s
+}
+
+[data-in*="fade"] {
+    opacity: 0
+}
+
+[data-in*="zoom"] {
+    opacity: 0.4
+}
+
+[data-in*="fadeUp"] {
+    transform: translateY(var(--animateTransform))
+}
+
+[data-in*="fadeDown"] {
+    transform: translateY(var(--animateTransform-1))
+}
+
+[data-in*="fadeRight"] {
+    transform: translateX(var(--animateTransform-1))
+}
+
+[data-in*="fadeLeft"] {
+    transform: translateX(var(--animateTransform))
+}
+
+[data-in*="zoomIn"] {
+    transform: scale(0.1)
+}
+
+[data-in*="fadeUpLeft"] {
+    transform: translateY(var(--animateTransform)) translateX(var(--animateTransform))
+}
+
+[data-in*="fadeUpRight"] {
+    transform: translateY(var(--animateTransform)) translateX(var(--animateTransform-1))
+}
+
+[data-in*="fadeDownLeft"] {
+    transform: translateY(var(--animateTransform-1)) translateX(var(--animateTransform))
+}
+
+[data-in*="fadeDownRight"] {
+    transform: translateY(var(--animateTransform-1)) translateX(var(--animateTransform-1))
+}
+
+.fadeUp,
+.fadeDown,
+.fadeRight,
+.fadeLeft,
+.fadeIn,
+.zoomIn,
+.zoomOut,
+.fadeUpLeft,
+.fadeUpRight,
+.fadeDownLeft,
+.fadeDownRight {
+    transition-delay: 0;
+    transform: translateX(0) translateY(0) scale(1);
+    opacity: 1
+}
+
+
+/**dynamic slider**/
+
+.dynamicSlider {
+    position: relative
+}
+
+.dsContainer {
+    overflow: hidden;
+    position: relative;
+    width: 100%
+}
+
+.dsSlides {
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    width: 100%;
+    transition: margin-inline-start 1s;
+    z-index: 2
+}
+
+.dsSlides:nth-child(2) {
+    position: absolute;
+    top: 0;
+    inset-inline-start: 100%;
+    transition: inset-inline-start 1s;
+    z-index: 1
+}
+
+.dsDot {
+    text-align: center
+}
+
+.dsDot.inds {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    z-index: 5
+}
+
+.dotSlide {
+    padding: 6px;
+    display: inline-block;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: rgba(200, 200, 200, 0.5)
+}
+
+.dotSlide.active {
+    background-color: var(--bgbtn)
+}
+
+.dark .dotSlide.active {
+    background-color: var(--bgbtndark)
+}
+
+.dsArrow {
+    position: absolute;
+    top: calc(50% - 20px);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: var(--bgbtn);
+    z-index: 5;
+    background-color: rgba(200, 200, 200, 0.5)
+}
+
+.dark .dsArrow {
+    color: var(--bgbtndark)
+}
+
+.startArrow {
+    left: calc(100% + 5px)
+}
+
+.endArrow {
+    right: calc(100% + 5px)
+}
+
+.rtl .startArrow {
+    left: unset;
+    right: calc(100% + 5px)
+}
+
+.rtl .endArrow {
+    right: unset;
+    left: calc(100% + 5px)
+}
+
+.startArrow.inds {
+    left: calc(100% - 45px)
+}
+
+.endArrow.inds {
+    right: calc(100% - 45px)
+}
+
+.rtl .startArrow.inds {
+    left: unset;
+    right: calc(100% - 45px)
+}
+
+.rtl .endArrow.inds {
+    right: unset;
+    left: calc(100% - 45px)
+}
+
+.rtl .dsArrow {
+    transform: rotateZ(180deg)
+}
+
+.dotSlide.dotMobiles {
+    display: none;
+}
+
+
+/**extra**/
+
+.sidebar .sticky {
+    top: 100px
+}
+
+@media only screen and (max-width: 1024px) {
+    .dotSlide.dotMobiles {
+        display: inline-block
+    }
+    .dotSlide.dotMobiles:nth-last-child(-n + 2) {
+        display: none
+    }
+    .startArrow {
+        left: unset;
+        right: 0
+    }
+    .endArrow {
+        right: unset;
+        left: 0
+    }
+    .rtl .startArrow {
+        right: unset;
+        left: 0
+    }
+    .rtl .endArrow {
+        left: unset;
+        right: 0
+    }
+    .dsSlides.Twraped {
+        flex-wrap: wrap
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .dotSlide.dotMobiles:nth-last-child(2) {
+        display: inline-block
+    }
+}
