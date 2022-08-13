@@ -53,12 +53,12 @@
 
 @font-face {
     font-family: 'mainfontFa';
-    src: url(../fonts/Sahel.woff) format("woff")
+    src: url(../fonts/main.woff) format("woff")
 }
 
 @font-face {
     font-family: 'subfontFa';
-    src: url(../fonts/Diplom.ttf) format('truetype')
+    src: url(../fonts/sub.ttf) format('truetype')
 }
 
 @font-face {
